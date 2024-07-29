@@ -1,0 +1,213 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+      body {
+        margin: 0%;
+        background-image: url("https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=600");
+      background-size: cover;
+      background-position: center;
+      }
+      .first {
+        margin-left: 300px;
+        background-color: rgba(0, 122, 10, 0);
+         padding-left: 10%; padding-top: 3%;margin-right: 25%;
+        align-items: center;
+      }
+      #track {
+        color: blueviolet;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      .item {
+        margin: 15px;
+      }
+      .display {
+        border: 1px solid rgb(0, 0, 0);
+        padding: 10px;
+        background-color: rgba(13, 14, 13, 0.4);
+        text-align: center;
+        text-decoration: underline;
+        color: rgb(82, 208, 143);
+      }
+      #form{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      span{
+       color:blanchedalmond;
+      }
+
+    .options{
+      background-color:rgba(199, 91, 145, 0.2);
+    }
+    #del_btn{margin-left: 600px;}
+    </style>
+  </head>
+  <body id="body">
+    <nav class="navbar bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="first_page.html">Expense<span id="track">Tracker</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Expense<span id="track">Tracker</span></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="first_page.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  More
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Help</a></li>
+                  <li><a class="dropdown-item" href="#">About</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Contact</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <br><br><br><br>
+      <div class="first">
+        <label for="textbox">Enter Amount</label>
+        <input type="number" id="textbox">
+        <button type="submit" id="btn">Submit</button>
+        <br><br><br>
+      </div>
+      <br>
+      <div class="options">
+        <input type="checkbox" id="Income" class="item" value="salary">Income</input>
+        <input type="checkbox" id="shop" class="item" value="shop">Shopping</input>
+        <input type="checkbox" id="Petrol" class="item" value="travelling">Petrol</input>
+        <input type="checkbox" id="Travellingticket" class="item" value="travelling">Travelling tickets</input>
+        <input type="checkbox" id="Electricity" class="item" value="bills">Electricity bill</input>
+        <input type="checkbox" id="Broadband" class="item" value="bills">Broadband bill</input>
+        <input type="checkbox" id="Food" class="item" value="food">Food</input>
+        <input type="checkbox" id="Movie" class="item" value="Entertainment">Movie</input>
+        <input type="checkbox" id="Medicines" class="item" value="medi">Medicines</input>
+        <input type="checkbox" id="Fruits" class="item" value="groceries">Fruits & Vegetables</input>
+        <div>
+        <input type="checkbox" id="Kirana" class="item" value="groceries">Kirana store</input>
+        <input type="checkbox" id="Mobile_recharge" class="item" value="bills">Mobile recharge</input>
+        <input type="checkbox" id="Other" class="item" value="others">Other Expense</input>
+        <input type="checkbox" id="hospital" class="item" value="medi">Hospital</input>
+      </div>
+      </div>
+      <br><br><br>
+      <p class="d-inline-flex gap-1">
+        <a href="#"  id="del_btn" class="btn" role="button" data-bs-toggle="button">RESET</a>
+        
+      </p>
+      <br><br><br>
+
+      <div class="display">
+        <form id="form">
+          <p>Bill payments: <span id="billPayments">0</span></p>
+          <p>Entertainment: <span id="entertainment">0</span></p>
+          <p>Food: <span id="food">0</span></p>
+          <p>Medical: <span id="medi">0</span></p>
+          <p>Groceries: <span id="groceries">0</span></p>
+          <p>Shopping: <span id="shopping">0</span></p>
+          <p>Travelling: <span id="travel">0</span></p>
+          <p>Others: <span id="others">0</span></p>
+
+
+          <p>Remaining Balance: <span id="remaining">0</span></p>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      let add = [];
+      let balance = 0;
+      const categories = {
+        bills: 0,
+        Entertainment: 0,
+        food: 0,
+        shop: 0,
+        medi: 0,
+        travelling: 0,
+        groceries: 0,
+        others: 0,
+        petrol: 0,
+        travelling: 0,
+        others: 0
+      };
+      let mybody = document.getElementById("body");
+     let btn = document.getElementById("btn");
+     btn.addEventListener("click", function() {
+        const checkbox = document.querySelector('input[type="checkbox"]:checked');
+        if (!checkbox) {
+          alert("Please select a category.");
+          return;
+        }
+
+        const checkboxVal = checkbox.value;
+        const textbox = document.getElementById("textbox");
+        const textboxValue = parseFloat(textbox.value);
+    
+        if (checkboxVal === "salary") {
+          balance += textboxValue;
+        } else {
+          balance -= textboxValue;
+          categories[checkboxVal] += textboxValue;
+          add.push({"value" :textboxValue, "category" :checkboxVal});
+          console.log(add)
+        }
+        updatevalues();
+        checkbox.checked = false;
+        textbox.value = '';
+
+
+       });
+
+
+   
+       let del_btn = document.getElementById("del_btn").addEventListener("click",()=>{
+      
+  
+        balance = 0;
+  for (let category in categories) {
+    categories[category] = 0;
+  }
+  add = [];
+  updatevalues();
+
+});
+
+function updatevalues(){
+  document.getElementById("remaining").innerText = balance;
+        document.getElementById("billPayments").innerText = categories.bills;
+        document.getElementById("entertainment").innerText = categories.Entertainment;
+        document.getElementById("food").innerText = categories.food;
+        document.getElementById("groceries").innerText = categories.groceries;
+        document.getElementById("medi").innerText = categories.medi;
+        document.getElementById("shopping").innerText = categories.shop;
+        document.getElementById("travel").innerText = categories.travelling; 
+        document.getElementById("others").innerText = categories.others; 
+}
+
+
+    </script>
+    
+  </body>
+</html>
